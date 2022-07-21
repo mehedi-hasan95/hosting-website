@@ -1,0 +1,360 @@
+/* ------------------------------------------------
+                    Page style 
+ -------------------------------------------------*/
+:root {
+   --primary-color: #016CEC;
+   --secondery-color: #1c3fa8;
+}
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+   font-family: 'Lato', sans-serif;
+   color: #333;
+   line-height: 1.6;
+}
+
+ul {
+   list-style: none;
+}
+
+a {
+   text-decoration: none;
+   color: #333;
+}
+
+h1,
+h2 {
+   line-height: 1.2;
+   margin: 10px 0;
+   font-weight: 700;
+}
+
+p {
+   line-height: 1.5;
+   margin: 10px 0;
+   color: #000;
+}
+
+img {
+   width: 100%;
+}
+
+/*--------------------------------------------- 
+                    Utilitis 
+ ---------------------------------------------*/
+
+.container {
+   max-width: 1280px;
+   margin: 0 auto;
+   overflow: auto;
+   padding: 0 40px;
+}
+
+.card {
+   background-color: #fff;
+   color: #333;
+   border-radius: 10px;
+   box-shadow: 0 3px 10px rgb(0 0 0 / 20%);
+   padding: 20px;
+   margin: 10px;
+}
+
+.text-center {
+   text-align: center;
+}
+
+.flex {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100%;
+}
+
+.grid {
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   justify-content: center;
+   align-items: center;
+   height: 100%;
+}
+
+.grid-3 {
+   grid-template-columns: repeat(3, 1fr);
+}
+
+.m-1, .p-1 {
+   margin: 1rem 0;
+}
+
+.m-2, .p-2 {
+   margin: 1.5rem 0;
+}
+
+.m-3, .p-3 {
+   margin: 2rem 0;
+}
+
+.m-4, .p-4 {
+   margin: 3rem 0;
+}
+
+/*-------------------------------------------- 
+                    nav style  
+ --------------------------------------------*/
+
+.nav-bar {
+   background-color: var(--primary-color);
+   color: #fff;
+   height: 70px;
+}
+
+.nav-bar .flex {
+   justify-content: space-between;
+}
+
+.nav-bar ul {
+   display: flex;
+}
+
+.nav-bar a {
+   color: #fff;
+   padding: 10px;
+   margin: 0 5px;
+}
+
+.nav-bar a:hover {
+   border-bottom: 2px solid #fff;
+}
+
+
+/*-------------------------------------------
+                Showcase style 
+ -------------------------------------------*/
+
+.showcase {
+   background-color: var(--primary-color);
+   height: 400px;
+   color: #fff;
+   position: relative;
+}
+
+section.showcase:before {
+   position: absolute;
+   left: 0;
+   right: 0;
+   content: "";
+   background-color: #fff;
+   bottom: -70px;
+   height: 100px;
+   transform: skewY(-3deg);
+   -webkit-transform: skewY(-3deg);
+   -moz-transform: skweY(-3deg);
+   -ms-transform: skweY(-3deg);
+}
+
+.showcase .grid {
+   display: grid;
+   grid-template-columns: 55% 45%;
+   overflow: visible;
+}
+
+.showcase-text h1 {
+   font-size: 40px;
+   padding-bottom: 30px;
+}
+
+.showcase-text p {
+   color: #fff;
+}
+
+.showcase-text .btn {
+   border: 1px solid #fff;
+   padding: 10px 20px;
+   display: inline-block;
+   margin-top: 15px;
+   color: #fff;
+   border-radius: 5px;
+   transition: 0.2s;
+}
+
+.showcase-text .btn:hover {
+   border: 1px solid #E4E4E4;
+}
+
+.showcase-form {
+   background-color: #fff;
+   padding: 40px;
+   height: 350px;
+   width: 400px;
+   position: relative;
+   top: 60px;
+   border-radius: 10px;
+   box-shadow: 0 3px 10px #DCDCDC;
+   z-index: 10;
+}
+
+.showcase-form h2 {
+   color: #000;
+}
+
+.form-control input[type="text"],
+.form-control input[type="password"] {
+   border: 0;
+   border-bottom: 1px solid #B4BECB;
+   width: 100%;
+   font-size: 16px;
+   padding: 3px;
+}
+
+.form-control input:focus {
+   outline: none;
+}
+
+.form-control {
+   margin: 30px 0;
+}
+
+input.submit-btn {
+   background-color: var(--primary-color);
+   border: none;
+   padding: 10px 30px;
+   color: #fff;
+   border-radius: 5px;
+   cursor: pointer;
+}
+
+/*-------------------------------------- 
+               Hosting Plan 
+--------------------------------------*/
+.hosting-plan-wrap {
+   padding-top: 100px;
+}
+
+.hosting-plan-wrap p {
+   max-width: 500px;
+   margin: 0 auto;
+   font-size: 18px;
+}
+
+.single-plan i.fa-solid {
+   font-size: 3em;
+}
+
+.single-plan h3 {
+   font-size: 2em;
+}
+
+.single-plan p {
+   color: var(--secondery-color);
+}
+
+.cli .grid {
+   grid-template-columns: repeat(3, 1fr);
+   grid-template-rows: repeat(2, 1fr);
+}
+
+.cli .grid >*:first-child {
+   grid-column: 1 / span 2;
+   grid-row: 1 / span 2;
+}
+
+/*------------------------------ 
+      Cloud Storage style 
+------------------------------*/
+
+.cloud-stroge {
+   background-color: var(--primary-color);
+}
+
+.cloud-stroge .grid {
+   grid-template-columns: 4fr 3fr;
+}
+
+.cloud-wrap h2 {
+   font-size: 2em;
+   font-weight: 700;
+   color: #fff;
+}
+
+.cloud-wrap p {
+   color: #fff;
+   font-size: 1em;
+   margin: 1rem 0;
+}
+
+a.cloud-btn {
+   background-color: #002240;
+   color: #fff;
+   padding: 10px 30px;
+   display: inline-block;
+   border-radius: 5px;
+}
+
+.language-text {
+   font-size: 2em;
+}
+
+.language-thumb .card {
+   transition: 0.3s;
+   text-align: center;
+   margin: 18px 10px 40px;
+}
+
+.language-thumb .card h4 {
+   font-size: 1.2em;
+   margin: 1ex 0;
+}
+
+.language-thumb .card:hover {
+   transform: translateY(-20px);
+}
+
+.language-thumb.flex {
+   flex-wrap: wrap;
+}
+
+
+/*------------------------------
+         Footer style 
+------------------------------*/
+footer {
+   background-color: #002240;
+   padding: 64px 0;
+}
+
+.footer-logo a {
+   color: #fff;
+   font-size: 2em;
+}
+
+.footer-logo p {
+   color: #fff;
+}
+
+footer nav ul li {
+   margin: 10px 0
+}
+
+footer nav ul li a {
+   color: #fff;
+}
+
+.footer-social-icon a {
+   margin: 0 5px;
+   padding: 0 10px;
+}
+
+.footer-social-icon a:hover i {
+   color:var(--secondery-color);
+}
+
+.footer-social-icon a i {
+   color: #fff;
+   font-size: 2em;
+   transition: 0.2s;
+}
