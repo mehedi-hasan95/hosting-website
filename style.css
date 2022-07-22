@@ -180,6 +180,10 @@ section.showcase:before {
    overflow: visible;
 }
 
+.showcase-text {
+   animation: slideInLeft 1s ease-in-out;
+}
+
 .showcase-text h1 {
    font-size: 40px;
    padding-bottom: 30px;
@@ -213,6 +217,7 @@ section.showcase:before {
    border-radius: 10px;
    box-shadow: 0 3px 10px #DCDCDC;
    z-index: 10;
+   animation: slideInRight 1s ease-in-out;
 }
 
 .showcase-form h2 {
@@ -377,6 +382,45 @@ footer nav ul li a {
 }
 
 /*----------------------------------- 
+               Animation 
+-----------------------------------*/
+@keyframes slideInLeft {
+   0% {
+      transform: translateX(-100%);
+   }
+   100% {
+      transform: translateX(0);
+   }
+}
+
+@keyframes slideInRight {
+   0% {
+      transform: translateX(100%);
+   }
+   100% {
+      transform: translateX(0);
+   }
+}
+
+@keyframes slideInTop {
+   0% {
+      transform: translateY(-100%);
+   }
+   100% {
+      transform: translateY(0);
+   }
+}
+
+@keyframes slideInBottom {
+   0% {
+      transform: translateY(100%);
+   }
+   100% {
+      transform: translateY(0);
+   }
+}
+
+/*----------------------------------- 
             Features page 
 -----------------------------------*/
 
@@ -453,7 +497,7 @@ img.server-img {
    }
 
    /* Features style  */
-   .all-feature.grid, .server-text {
+   .showcase-form, .all-feature.grid, .server-text {
       text-align: center;
   }
   
@@ -464,6 +508,14 @@ img.server-img {
   /* main features  */
   .features-main-wrap.grid.grid-3>*:first-child, .features-main-wrap.grid.grid-3>*:nth-child(2) {
    grid-column: 1;
+}
+
+/* animation style  */
+.showcase-text {
+   animation: slideInTop 1s ease-in-out;
+}
+.showcase-form {
+   animation: slideInBottom 1s ease-in-out;
 }
 
 }
