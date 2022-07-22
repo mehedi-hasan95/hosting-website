@@ -274,7 +274,7 @@ input.submit-btn {
    grid-template-rows: repeat(2, 1fr);
 }
 
-.cli .grid >*:first-child {
+.cli .grid>*:first-child {
    grid-column: 1 / span 2;
    grid-row: 1 / span 2;
 }
@@ -366,11 +366,35 @@ footer nav ul li a {
 }
 
 .footer-social-icon a:hover i {
-   color:var(--secondery-color);
+   color: var(--secondery-color);
 }
 
 .footer-social-icon a i {
    color: #fff;
    font-size: 2em;
    transition: 0.2s;
+}
+
+
+@media screen and (max-width: 768px) {
+
+   .grid,
+   .grid-3,
+   .cli .grid,
+   .cloud-stroge .grid {
+      grid-template-columns: 1fr;
+   }
+
+   .showcase .grid {
+      grid-template-columns: 1fr;
+   }
+
+   .showcase {
+      height: auto;
+   }
+
+   .cli .grid>*:first-child {
+      grid-column: 1;
+      grid-row: 1;
+   }
 }
