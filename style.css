@@ -473,6 +473,11 @@ img.server-img {
    grid-column: 1 / span 2;
 }
 
+.hidden {
+   visibility: hidden;
+   height: 0;
+}
+
 
 @media screen and (max-width: 768px) {
 
